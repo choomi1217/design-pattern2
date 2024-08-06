@@ -1,6 +1,6 @@
 package cho.ym.decorator.starbuks;
 
-public class DarkRoast implements Beverage {
+public class DarkRoast extends Beverage {
     @Override
     public String getDescription() {
         return "Dark Roast Coffee";

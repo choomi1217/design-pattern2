@@ -1,6 +1,6 @@
 package cho.ym.decorator.starbuks;
 
-public class Decaf implements Beverage {
+public class Decaf extends Beverage {
     @Override
     public String getDescription() {
         return "Decaf Coffee";

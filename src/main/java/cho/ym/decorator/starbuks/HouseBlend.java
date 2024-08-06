@@ -1,6 +1,6 @@
 package cho.ym.decorator.starbuks;
 
-public class HouseBlend implements Beverage {
+public class HouseBlend extends Beverage {
     @Override
     public String getDescription() {
         return "House Blend Coffee";

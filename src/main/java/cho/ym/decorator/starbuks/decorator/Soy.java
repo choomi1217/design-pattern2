@@ -1,13 +1,20 @@
 package cho.ym.decorator.starbuks.decorator;
 
-public class Soy implements Decorator {
+import cho.ym.decorator.starbuks.Beverage;
+
+public class Soy extends Decorator {
+
+    public Soy(Beverage beverage) {
+        this.beverage = beverage;
+    }
+
     @Override
     public double cost() {
-        return 0;
+        return beverage.cost() + .15;
     }
 
     @Override
     public String getDescription() {
-        return "";
+        return beverage.getDescription() + ", Soy";
     }
 }

@@ -1,13 +1,20 @@
 package cho.ym.decorator.starbuks.decorator;
 
-public class Whip implements Decorator{
+import cho.ym.decorator.starbuks.Beverage;
+
+public class Whip extends Decorator {
+
+    public Whip(Beverage beverage) {
+        this.beverage = beverage;
+    }
+
     @Override
     public double cost() {
-        return 0;
+        return .10 + beverage.cost();
     }
 
     @Override
     public String getDescription() {
-        return "";
+        return beverage.getDescription() + ", Whip";
     }
 }
