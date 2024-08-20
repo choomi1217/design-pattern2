@@ -9,7 +9,7 @@ public class LoggingExceptionDeco extends ExceptionDeco {
 
     public LoggingExceptionDeco(MyException exception) {
         this.myException = exception;
-        count++;
+        this.count = exception instanceof ExceptionDeco ? ((ExceptionDeco) exception).count + 1 : 1;
     }
 
     @Override
